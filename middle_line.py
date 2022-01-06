@@ -6,7 +6,7 @@ class Middle_line(Turtle):
         super().__init__()
         self.pencolor("white")
         self.penup()
-        self.goto(0, -400)
+        self.goto(0, -300)
         self.setheading(90)
         self.pendown()
         self.hideturtle()
@@ -14,7 +14,7 @@ class Middle_line(Turtle):
         self.speed(0)
 
     def draw(self):
-        while self.ycor() < 400:
+        while self.ycor() < 300:
             self.forward(10)
             self.penup()
             self.forward(10)
