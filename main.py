@@ -1,6 +1,7 @@
 from turtle import Screen
 from middle_line import Middle_line
 from paddle import Paddle
+from ball import Ball
 import time
 
 screen = Screen()
@@ -16,7 +17,7 @@ mid_line.draw()
 left_paddle = Paddle((-380, 0))
 right_paddle = Paddle((380, 0))
 
-
+ball = Ball()
 screen.update()
 screen.listen()
 
@@ -30,5 +31,10 @@ game_on = True
 while game_on:
     screen.update()
     time.sleep(0.1)
+    ball.move()
+
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
+
 
 screen.exitonclick()
